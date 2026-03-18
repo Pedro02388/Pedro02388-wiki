@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MC Pedro02388 | Official Hub</title>
 
-    <meta name="description" content="Portal oficial de MC Pedro02388. YouTuber, Streamer na Kick e Comunidade Discord.">
-    <meta name="author" content="Pedro02388">
-    
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
     <style>
@@ -22,127 +19,112 @@
             --text-dim: #94a3b8;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            user-select: none;
-            -webkit-tap-highlight-color: transparent;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-tap-highlight-color: transparent; }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(circle at 0% 0%, rgba(108, 242, 194, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 100% 100%, rgba(77, 166, 255, 0.05) 0%, transparent 50%);
+            background-image: radial-gradient(circle at top right, rgba(108, 242, 194, 0.1), transparent 50%);
             color: var(--text-main);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            line-height: 1.6;
         }
 
-        /* Camada de Proteção VPN */
+        /* Bloqueio de VPN (Simulação via Script) */
         #vpn-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: #000; z-index: 9999;
-            justify-content: center; align-items: center; text-align: center;
-            padding: 20px;
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #000; z-index: 9999; justify-content: center; align-items: center; text-align: center;
         }
 
-        header {
-            padding: 80px 20px 40px;
+        /* Intro com Foto */
+        .header-intro {
             text-align: center;
-            animation: fadeInDown 1s ease-out;
+            padding: 70px 20px 30px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            padding: 5px;
+            background: var(--bg-dark);
+            object-fit: cover;
         }
 
         .profile-badge {
             display: inline-block;
-            padding: 6px 16px;
+            padding: 5px 15px;
             background: rgba(108, 242, 194, 0.1);
             border: 1px solid var(--primary);
             border-radius: 100px;
-            font-size: 0.75rem;
+            font-size: 10px;
             font-weight: 800;
+            color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--primary);
-            margin-bottom: 15px;
         }
 
-        header h1 {
-            font-size: clamp(2.5rem, 10vw, 3.5rem);
-            font-weight: 800;
-            background: linear-gradient(to right, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -2px;
-        }
+        h1 { font-size: 2.8rem; letter-spacing: -2px; margin: 10px 0; background: linear-gradient(to bottom, #fff, #999); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        main {
-            max-width: 550px;
-            margin: 0 auto;
-            padding: 0 20px 100px;
-            width: 100%;
-        }
+        main { max-width: 550px; margin: 0 auto; padding: 0 20px 80px; }
 
         .card {
             background: var(--glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 24px;
+            border-radius: 28px;
             padding: 30px;
-            margin-bottom: 24px;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 25px;
+            transition: 0.3s;
         }
 
         .section-title {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 800;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
             gap: 10px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        /* Botões de Link */
+        /* Trajetória Revisada */
+        .bio-p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 15px; }
+        .timeline-highlight {
+            background: rgba(108, 242, 194, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
         .social-link {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 18px 24px;
+            padding: 18px 25px;
             background: rgba(255,255,255,0.02);
             border: 1px solid var(--glass-border);
-            border-radius: 16px;
+            border-radius: 20px;
             color: #fff;
             text-decoration: none;
             margin-bottom: 12px;
             font-weight: 600;
-            transition: all 0.2s ease;
+            transition: 0.3s;
         }
 
-        .social-link:hover {
-            background: rgba(255,255,255,0.05);
-            padding-left: 30px;
-            border-color: var(--primary);
-        }
-
-        /* Destaque para o Discord */
-        .link-discord {
-            background: rgba(88, 101, 242, 0.1);
-            border-color: rgba(88, 101, 242, 0.3);
-        }
-
-        .link-discord:hover {
-            background: rgba(88, 101, 242, 0.2);
-            border-color: var(--discord);
-        }
+        .social-link:hover { border-color: var(--primary); background: rgba(255,255,255,0.05); transform: scale(1.02); }
+        .discord-btn { background: rgba(88, 101, 242, 0.1); border-color: rgba(88, 101, 242, 0.2); }
 
         .btn-donate {
             display: block;
@@ -150,137 +132,103 @@
             color: #05070a;
             text-align: center;
             padding: 20px;
-            border-radius: 16px;
+            border-radius: 18px;
             font-weight: 800;
             text-decoration: none;
-            margin-top: 10px;
-            box-shadow: 0 10px 30px rgba(108, 242, 194, 0.3);
-            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(108, 242, 194, 0.2);
         }
 
-        /* Estilização da Meta */
-        .goal-wrapper {
-            background: rgba(0,0,0,0.4);
-            border-radius: 18px;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
+        footer { text-align: center; padding: 40px; font-size: 0.75rem; color: var(--text-dim); opacity: 0.8; }
 
-        .goal-frame {
-            width: 100%;
-            height: 95px;
-            border: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.75rem;
-            color: var(--text-dim);
-            margin-top: auto;
-        }
-
-        .source-tag {
-            background: rgba(255,255,255,0.05);
-            padding: 8px 15px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 15px;
-            border: 1px solid var(--glass-border);
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 480px) {
-            header { padding: 60px 20px 30px; }
-            .card { padding: 20px; }
-        }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
-
-    <script>
-        // ANTI-VPN REALISTA
-        async function checkSecurity() {
-            try {
-                const res = await fetch('https://ipapi.co/json/');
-                const data = await res.json();
-                if (data.proxy || data.hosting) {
-                    document.getElementById('vpn-overlay').style.display = 'flex';
-                }
-            } catch (e) {}
-        }
-        window.onload = checkSecurity;
-
-        // Bloqueios de Inspeção
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.onkeydown = function(e) {
-            if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false;
-        };
-    </script>
 </head>
 <body>
 
 <div id="vpn-overlay">
-    <div>
-        <h1 style="color: red;">ACESSO BLOQUEADO</h1>
-        <p>Desative sua VPN/Proxy para acessar o site oficial.</p>
-    </div>
+    <h1 style="color: #ff4d4d;">ACESSO RESTRITO</h1>
+    <p>VPN ou Proxy detectados. Por favor, desative para continuar.</p>
 </div>
 
-<header>
-    <div class="profile-badge">Online</div>
+<header class="header-intro">
+    <div class="profile-wrapper">
+        <img src="https://cdn.discordapp.com/emojis/1462428152960651476.png?v=1&size=48&quality=lossless" class="profile-pic" alt="Pedro02388">
+    </div>
+    <br>
+    <div class="profile-badge">Official Profile</div>
     <h1>MC Pedro02388</h1>
-    <p style="color: var(--text-dim); font-weight: 600;">Streamer • YouTuber • Community Leader</p>
+    <p style="color: var(--text-dim); font-weight: 600;">Streamer na Kick & Creator</p>
 </header>
 
 <main>
     <section class="card">
-        <div class="section-title"><span>●</span> Redes & Comunidade</div>
-        
-        <a href="https://discord.gg/Tnexdv6ZrH" class="social-link link-discord" target="_blank">
-            <span>💬 Servidor Discord (Oficial)</span>
+        <div class="section-title">👤 Sobre Mim</div>
+        <p class="bio-p">
+            Sou uma pessoa <b>Não-Binária</b> e convivo com o <b>TDAH</b> (Transtorno do Déficit de Atenção com Hiperatividade), características que trazem uma perspectiva única e muita energia para as minhas criações.
+        </p>
+
+        <div class="section-title" style="margin-top: 25px;">⏳ Minha História</div>
+        <p class="bio-p">
+            Tudo começou em 2022 com o canal <i>"Pedro Lopes"</i>. Infelizmente, após enfrentar 3 strikes, o canal foi removido. Porém, a paixão por criar falou mais alto.
+        </p>
+
+        <div class="timeline-highlight">
+            ✨ Em <b>6 de janeiro de 2023</b>, nasceu oficialmente o canal <b>Pedro02388</b>, marcando o início da jornada que conhecemos hoje.
+        </div>
+
+        <p class="bio-p">
+            Desde então, o projeto não parou de crescer, expandindo do YouTube para as transmissões ao vivo na <b>Kick em 2025</b>, onde construímos uma comunidade cada vez mais unida.
+        </p>
+    </section>
+
+    <section class="card">
+        <div class="section-title">🔗 Ecossistema</div>
+        <a href="https://discord.gg/Tnexdv6ZrH" class="social-link discord-btn" target="_blank">
+            <span>💬 Servidor Discord</span>
             <small>ENTRAR</small>
         </a>
-
         <a href="https://www.kick.com/Pedro02388" class="social-link" target="_blank">
             <span>🟢 Kick (Lives)</span>
             <small>→</small>
         </a>
-
         <a href="https://www.youtube.com/@pedro02388" class="social-link" target="_blank">
             <span>🔴 YouTube</span>
-            <small>→</small>
-        </a>
-
-        <a href="https://www.instagram.com/pedro02388_ofc" class="social-link" target="_blank">
-            <span>📸 Instagram</span>
             <small>→</small>
         </a>
     </section>
 
     <section class="card" style="text-align: center;">
-        <div class="section-title" style="justify-content: center;">🎯 APOIE O PROJETO</div>
-        <div class="goal-wrapper">
-            <iframe 
-                src="https://api.pixgg.com/goals/?apikey=7ce8e087-3d7e-4b1e-9e5d-185cf9253306&goal=9351" 
-                class="goal-frame" 
-                scrolling="no">
-            </iframe>
+        <div class="section-title" style="justify-content: center;">🎯 Objetivo Atual</div>
+        <div style="background: rgba(0,0,0,0.3); border-radius: 20px; padding: 10px; margin-bottom: 15px;">
+            <iframe src="https://api.pixgg.com/goals/?apikey=7ce8e087-3d7e-4b1e-9e5d-185cf9253306&goal=9351" width="100%" height="95" frameborder="0" scrolling="no"></iframe>
         </div>
-        <a href="https://sites.google.com/view/via-livepix-pedro02388" target="_blank" class="btn-donate">
-            DOAR VIA LIVEPIX
-        </a>
+        <a href="https://sites.google.com/view/via-livepix-pedro02388" target="_blank" class="btn-donate">APOIAR VIA LIVEPIX</a>
     </section>
 </main>
 
 <footer>
-    <div class="source-tag">
-        Portal Original: <a href="https://sites.google.com/view/pedro02388-oficial/" style="color: var(--primary); text-decoration: none; font-weight: bold;">pedro02388-oficial</a>
+    <div style="margin-bottom: 15px;">
+        Conteúdo original extraído de: <br>
+        <a href="https://sites.google.com/view/pedro02388-oficial/" style="color: var(--primary); text-decoration: none; font-weight: bold;">pedro02388-oficial</a>
     </div>
-    <div>© 2026 MC Pedro02388 — Todos os Direitos Reservados</div>
+    <p>© 2026 MC Pedro02388 — Todos os Direitos Reservados</p>
 </footer>
+
+<script>
+    // Anti-VPN Simples
+    async function checkVPN() {
+        try {
+            const res = await fetch('https://ipapi.co/json/');
+            const data = await res.json();
+            if (data.proxy || data.hosting) document.getElementById('vpn-overlay').style.display = 'flex';
+        } catch(e) {}
+    }
+    checkVPN();
+
+    // Proteção de Código
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = e => { if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false; };
+</script>
 
 </body>
 </html>
