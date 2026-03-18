@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MC Pedro02388 | YouTuber e Streamer na Kick</title>
+
+    <meta name="description" content="MC Pedro02388 é criador de conteúdo digital brasileiro, YouTuber desde 2023 e streamer na Kick. Site oficial.">
+    <meta name="author" content="Pedro02388">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --card: #121826;
+            --text: #e6e9f0;
+            --muted: #9aa4bf;
+            --accent: #6cf2c2;
+            --gradient: linear-gradient(135deg, #6cf2c2, #4da6ff);
+        }
+
+        /* Bloqueio de seleção e ajustes base */
+        * {
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top, #10162a, #0b0e14);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            animation: fadeIn 1s ease;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 8vw, 3rem);
+            margin: 0;
+            color: var(--accent);
+            text-shadow: 0 0 15px rgba(108, 242, 194, 0.4);
+        }
+
+        header p {
+            color: var(--muted);
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        main {
+            max-width: 600px;
+            margin: auto;
+            padding: 0 15px 40px;
+        }
+
+        section {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            animation: slideUp 0.8s ease both;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        /* --- CORREÇÃO DA META PARA CELULAR --- */
+        .goal-container {
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            overflow: hidden; 
+        }
+
+        .goal-frame {
+            width: 100%;
+            max-width: 400px; 
+            height: 90px;
+            border: none;
+            display: block;
+        }
+
+        /* Links Estilizados */
+        .link-button {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            color: var(--text);
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .link-button:hover {
+            border-color: var(--accent);
+            background: rgba(108, 242, 194, 0.05);
+        }
+
+        /* Botão Doar */
+        .btn-donate {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: 50px;
+            background: var(--gradient);
+            color: #000;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(108, 242, 194, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+        @keyframes slideUp { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: none;} }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        .copyright-tag {
+            display: block;
+            margin-top: 5px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Ajuste específico para telas muito pequenas */
+        @media (max-width: 400px) {
+            .goal-frame {
+                transform: scale(0.9);
+            }
+        }
+    </style>
+
+    <script>
+        // Bloqueios de segurança
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 85 || e.keyCode === 83)) return false;
+            if (e.keyCode === 123) return false;
+        };
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>MC Pedro02388</h1>
+    <p>🚀 YouTuber • Streamer na Kick</p>
+</header>
+
+<main>
+    <section>
+        <h2>Sobre</h2>
+        <p>MC Pedro02388 é um criador de conteúdo digital brasileiro, focado em entretenimento e lives interativas desde 2023.</p>
+    </section>
+
+    <section style="text-align: center;">
+        <h2>🎯 Meta da Live</h2>
+        <div class="goal-container">
+            <iframe 
+                src="https://api.pixgg.com/goals/?apikey=7ce8e087-3d7e-4b1e-9e5d-185cf9253306&goal=9351" 
+                class="goal-frame" 
+                scrolling="no" 
+                frameborder="0">
+            </iframe>
+        </div>
+        
+        <p style="margin: 15px 0; font-size: 0.85rem; color: var(--muted);">Contribua com o crescimento do canal!</p>
+        
+        <a href="https://sites.google.com/view/via-livepix-pedro02388" target="_blank" class="btn-donate">
+            DOAR VIA LIVEPIX
+        </a>
+    </section>
+
+    <section>
+        <h2>Links Oficiais</h2>
+        <div style="display: flex; flex-direction: column;">
+            <a href="https://www.kick.com/Pedro02388" class="link-button" target="_blank">🟢 Kick (Lives)</a>
+            <a href="https://www.youtube.com/@pedro02388" class="link-button" target="_blank">🔴 YouTube</a>
+            <a href="https://www.instagram.com/pedro02388_ofc" class="link-button" target="_blank">📸 Instagram</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Trajetória</h2>
+        <p>Iniciado em 2023, o projeto expandiu do YouTube para as transmissões ao vivo na Kick em 2025, criando uma comunidade sólida.</p>
+    </section>
+</main>
+
+<footer>
+    <div>© 2026 MC Pedro02388 — Site Oficial</div>
+    <span class="copyright-tag">© Pedro02388 - Todos os Direitos Reservados</span>
+</footer>
+
+</body>
+</html>
