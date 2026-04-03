@@ -1,175 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MC Pedro02388 | Official Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <meta name="description" content="MC Pedro02388 - Website oficial. Minha trajetória, comunidade e links.">
-    <meta property="og:title" content="MC Pedro02388 - Website">
-    <meta property="og:description" content="Minha trajetória no YouTube e evolução na comunidade.">
-    <meta property="og:image" content="https://cdn.discordapp.com/avatars/1303696915543625830/17f33f76ef569552d340a88f3de4197b.webp">
-    <meta property="og:url" content="https://pedro02388-wiki.vercel.app">
+<title>MC Pedro02388 - Website</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<!-- PREVIEW -->
+<meta property="og:title" content="MC Pedro02388 - Website">
+<meta property="og:description" content="Acesse todos os links oficiais.">
+<meta property="og:image" content="https://cdn.discordapp.com/avatars/1303696915543625830/88715de3471a83ca0079973c84c35a00.webp?size=512">
 
-    <style>
-        :root {
-            --primary: #6cf2c2;
-            --secondary: #4da6ff;
-            --bg-dark: #05070a;
-            --glass: rgba(255,255,255,0.03);
-            --glass-border: rgba(255,255,255,0.08);
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            user-select: none;
-            -webkit-user-drag: none;
-        }
+<style>
+:root {
+    --primary: #6cf2c2;
+    --bg: #05070a;
+}
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-main);
-        }
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: white;
+    text-align: center;
+    margin: 0;
+}
 
-        img { pointer-events: none; }
+/* PROTEÇÃO CSS */
+body, img {
+    user-select: none;
+    -webkit-user-select: none;
+}
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-        }
+img {
+    pointer-events: none;
+}
 
-        .profile-pic {
-            width: 120px;
-            border-radius: 50%;
-            border: 3px solid var(--primary);
-        }
+/* HEADER */
+.profile {
+    margin-top: 60px;
+}
 
-        h1 {
-            font-size: 2.5rem;
-            margin-top: 10px;
-        }
+.profile img {
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+}
 
-        main {
-            max-width: 500px;
-            margin: auto;
-            padding: 20px;
-        }
+/* CARDS */
+.card {
+    margin: 20px auto;
+    max-width: 500px;
+    background: rgba(255,255,255,0.03);
+    padding: 20px;
+    border-radius: 20px;
+}
 
-        .card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
+/* LINKS */
+a {
+    display: block;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    text-decoration: none;
+}
 
-        .social-link {
-            display: block;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: white;
-            border: 1px solid var(--glass-border);
-        }
+a:hover {
+    border: 1px solid var(--primary);
+}
 
-        .social-link:hover {
-            border-color: var(--primary);
-        }
-
-        .btn {
-            display: block;
-            background: linear-gradient(135deg,var(--primary),var(--secondary));
-            text-align: center;
-            padding: 15px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            font-size: 12px;
-            color: var(--text-dim);
-        }
-    </style>
+/* BLOQUEIO SCREEN */
+#blocked {
+    display: none;
+    position: fixed;
+    background: black;
+    color: red;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 9999;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <img src="https://cdn.discordapp.com/avatars/1303696915543625830/17f33f76ef569552d340a88f3de4197b.webp" class="profile-pic">
-    
+<div id="blocked">ACESSO BLOQUEADO</div>
+
+<div class="profile">
+    <img src="https://cdn.discordapp.com/avatars/1303696915543625830/88715de3471a83ca0079973c84c35a00.webp?size=2048"
+    draggable="false"
+    oncontextmenu="return false;">
+
     <h1>MC Pedro02388</h1>
     <p>Streamer na Kick & Creator</p>
 
     <!-- CONTADOR -->
-    <div style="margin-top:10px;">
-        <img src="https://api.visitorbadge.io/api/visitors?path=pedro02388&countColor=%236cf2c2">
-    </div>
-</header>
-
-<main>
+    <img src="https://api.visitorbadge.io/api/visitors?path=pedro02388&countColor=%236cf2c2">
+</div>
 
 <div class="card">
     <h3>Sobre Mim</h3>
-    <p>Sou uma pessoa Não-Binária e convivo com TDAH, trazendo energia única às minhas criações.</p>
+    <p>Sou uma pessoa Não-Binária e convivo com TDAH.</p>
 
     <h3>Minha História</h3>
-    <p>Comecei em 2022 com "Pedro Lopes". Após dificuldades, nasceu Pedro02388 em 2023.</p>
+    <p>Comecei em 2022 e criei Pedro02388 em 2023.</p>
 </div>
 
 <div class="card">
     <h3>Ecossistema</h3>
 
-    <a href="https://linktr.ee/Pedro02388" class="social-link">🌐 Linktree</a>
-    <a href="https://discord.gg/Tnexdv6ZrH" class="social-link">💬 Discord</a>
-    <a href="https://www.kick.com/Pedro02388" class="social-link">🟢 Kick</a>
-    <a href="https://www.youtube.com/@pedro02388" class="social-link">🔴 YouTube</a>
+    <a href="https://linktr.ee/Pedro02388" target="_blank">🌐 Linktree</a>
+    <a href="https://discord.gg/Tnexdv6ZrH" target="_blank">💬 Discord</a>
+    <a href="https://www.kick.com/Pedro02388" target="_blank">🟢 Kick</a>
+    <a href="https://www.youtube.com/@pedro02388" target="_blank">🔴 YouTube</a>
 </div>
-
-<div class="card">
-    <h3>Objetivo</h3>
-
-    <iframe src="https://api.pixgg.com/goals/?apikey=7ce8e087-3d7e-4b1e-9e5d-185cf9253306&goal=9351" width="100%" height="95"></iframe>
-
-    <a href="https://sites.google.com/view/via-livepix-pedro02388" class="btn">APOIAR</a>
-</div>
-
-</main>
-
-<footer>
-    © 2026 MC Pedro02388
-</footer>
 
 <script>
-// BLOQUEIOS
+// BLOQUEIOS PESADOS
+
+// botão direito
 document.addEventListener("contextmenu", e => e.preventDefault());
+
+// seleção
+document.addEventListener("selectstart", e => e.preventDefault());
+
+// arrastar
 document.addEventListener("dragstart", e => e.preventDefault());
 
+// teclas
 document.addEventListener("keydown", function(e) {
     if (e.key === "F12") e.preventDefault();
-    if (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) e.preventDefault();
-    if (e.ctrlKey && ["u","s"].includes(e.key.toLowerCase())) e.preventDefault();
+
+    if (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key.toUpperCase()))
+        e.preventDefault();
+
+    if (e.ctrlKey && ["U","S"].includes(e.key.toUpperCase()))
+        e.preventDefault();
 });
 
 // DETECTAR DEVTOOLS
 setInterval(() => {
-    if (window.outerWidth - window.innerWidth > 160) {
-        document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:50px;'>ACESSO BLOQUEADO</h1>";
+    const aberto = window.outerWidth - window.innerWidth > 160 ||
+                   window.outerHeight - window.innerHeight > 160;
+
+    if (aberto) {
+        document.getElementById("blocked").style.display = "flex";
     }
 }, 1000);
 </script>
 
 </body>
-</html> 
+</html>
